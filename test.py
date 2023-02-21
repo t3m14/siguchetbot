@@ -1,3 +1,2 @@
-import datetime
-
-print(datetime.datetime.now().date() - datetime.datetime.month)
+from datetime import datetime, timedelta
+print(datetime.now().date() - timedelta(days=30))
