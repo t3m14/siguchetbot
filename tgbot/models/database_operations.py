@@ -46,3 +46,9 @@ def reduse_counter(id):
         return True
     except:
         return False
+def get_today_counter(id):
+    day = Day.select().where((Day.user.telegram_id) == id & (Day.date=datetime.datetime.now().date())).get()
+    return day.sigarets_count
+def get_counter_by_date(id, date):
+    day = Day.select().where((Day.user.telegram_id) == id & (Day.date=date).get()
+    return day.sigarets_count
