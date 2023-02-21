@@ -8,7 +8,7 @@ class User(Model):
     class Meta:
         database = db
 class Day(Model):
-    user = ForeignKeyField(User)
+    user = ForeignKeyField(User, null=True)
     sigarets_count = IntegerField()
     date = DateField(default=datetime.datetime.now().date())
     class Meta:

@@ -4,7 +4,7 @@ from ..keyboards.reply import main_menu
 from ..models.database_operations import create_user_if_not_exists
 
 async def user_start(message: Message):
-    create_user_if_not_exists(message.from_user.id)
+    print(create_user_if_not_exists(message.from_user.id))
     await message.reply("Привет! Выбери нужный тебе пункт меню", reply_markup=main_menu)
 
 
